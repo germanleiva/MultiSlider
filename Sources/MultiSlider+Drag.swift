@@ -17,6 +17,7 @@ extension MultiSlider: UIGestureRecognizerDelegate {
             // determine thumb to drag
             let location = panGesture.location(in: slideView)
             draggedThumbIndex = closestThumb(point: location)
+            sendActions(for: .touchDown)
         case .ended, .cancelled, .failed:
             if isHapticSnap { selectionFeedbackGenerator.end() }
             sendActions(for: .touchUpInside) // no bounds check for now (.touchUpInside vs .touchUpOutside)
