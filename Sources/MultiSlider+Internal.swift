@@ -196,19 +196,19 @@ extension MultiSlider {
     }
 
     func adjustValuesToStepAndLimits() {
-        var adjusted = value.sorted()
-        for i in 0 ..< adjusted.count {
-            let snapped = adjusted[i].rounded(snapStepSize)
-            adjusted[i] = min(maximumValue, max(minimumValue, snapped))
-        }
-
-        isSettingValue = true
-        value = adjusted
-        isSettingValue = false
-
-        for i in 0 ..< value.count {
-            positionThumbView(i)
-        }
+//        var adjusted = value.sorted()
+//        for i in 0 ..< adjusted.count {
+//            let snapped = adjusted[i].rounded(snapStepSize)
+//            adjusted[i] = min(maximumValue, max(minimumValue, snapped))
+//        }
+//
+//        isSettingValue = true
+//        value = adjusted
+//        isSettingValue = false
+//
+//        for i in 0 ..< value.count {
+//            positionThumbView(i)
+//        }
     }
 
     func positionThumbView(_ i: Int) {
